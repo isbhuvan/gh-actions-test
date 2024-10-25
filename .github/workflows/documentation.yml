@@ -30,5 +30,6 @@ jobs:
         uses: terraform-docs/gh-actions@v1.3.0
         with:
           working-dir: .
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           git-push: "true"
           git-commit-message: "automation: terraform docs updated"
