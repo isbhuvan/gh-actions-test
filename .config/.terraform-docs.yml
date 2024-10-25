@@ -3,8 +3,15 @@ output-file: "README.md"
 output-mode: inject
 
 content: |
-  <!-- Automatically generated documentation with terraform-docs -->
-  # Terraform Module Documentation
+  {{ .Header }}
+  {{ .Requirements }}
+  {{ .Providers }}
+  {{ .Modules }}
+  {{ .Resources }}
+  {{ .Inputs }}
+  {{ .Outputs }}
+  {{ .Footer }}
+
 
 header-from: "docs/.header.md"
 footer-from: "docs/.footer.md"
