@@ -17,6 +17,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Read issue details
+        env:
+           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "Issue Title: ${{ github.event.issue.title }}"
           echo "Issue Body: ${{ github.event.issue.body }}"
